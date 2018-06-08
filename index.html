@@ -41,11 +41,9 @@ In front you of you is a church; to the right is a restaurant; to the left is a 
 
 [[Look at the menu in the window|menyn]]
 (link: &quot;Go back&quot;)[(goto:$previousPassage)]</tw-passagedata><tw-passagedata pid="5" name="butcher" tags="" position="1409.5,676.5" size="100,100">(set: $extra to 0)(set: $itemCarried to &quot;&quot;)
-
-(set: $pork to (datamap:&quot;name&quot;, &quot;Grisskött&quot;, &quot;description&quot;,&quot;Fresh pork.&quot;, &quot;pickupText&quot;, &quot;You take the package of pork.&quot;, &quot;price&quot;, 30, &quot;isCarried&quot;, false))
-(set: $beef to (datamap:&quot;name&quot;, &quot;Nötkött&quot;, &quot;description&quot;,&quot;Some tasty beef.&quot;, &quot;pickupText&quot;, &quot;You take the beef from Annika.&quot;, &quot;price&quot;, 40, &quot;isCarried&quot;, false))
-(set: $chicken to (datamap:&quot;name&quot;, &quot;Kyckling&quot;, &quot;description&quot;,&quot;Some scrumcioukn s chicken.&quot;, &quot;price&quot;, 20, &quot;isCarried&quot;, false))
-
+(set: $pork to (datamap:&quot;name&quot;, &quot;grisskött&quot;, &quot;description&quot;,&quot;Fresh pork.&quot;, &quot;pickupText&quot;, &quot;You take the package of pork.&quot;, &quot;price&quot;, 30, &quot;isCarried&quot;, false))
+(set: $beef to (datamap:&quot;name&quot;, &quot;nötkött&quot;, &quot;description&quot;,&quot;Some tasty beef.&quot;, &quot;pickupText&quot;, &quot;You take the beef from Annika.&quot;, &quot;price&quot;, 40, &quot;isCarried&quot;, false))
+(set: $chicken to (datamap:&quot;name&quot;, &quot;kyckling&quot;, &quot;description&quot;,&quot;Some scrumcious chicken.&quot;, &quot;price&quot;, 20, &quot;isCarried&quot;, false))
 You enter the butcher&#39;s, passing under the big SLAKTAREN sign as you enter. It is a tidy little shop, with a white tile floor and hard wood panels on the walls. 
 
 Off to right side sits a big picture of a woman you assume to be, the proprietor holding a pigs head. It appears to have been taken by a local magazine as part of their &#39;best of&#39; awards. 
@@ -60,7 +58,7 @@ Nötkött - 40 Kr./100g
 
 Kyckling 20 Kr./100g
 
-(if: $money is &gt;39)[You have $money kronar left. How much can you buy?
+(if: $money is &gt;39)[You have $money kronar left. How much pork, beef and/or chicken do you want to buy?
 
 (link: &quot;Jag ska ha grisskött&quot;)[(set: $itemCarried to $pork)(goto: &quot;purchase&quot;)]
 
@@ -89,12 +87,8 @@ What happened to the pet food?
 
 (link: &quot;Varför har du mat inte för djur?&quot;)[(set: $extra to 1)(goto: &quot;butcher2&quot;)]</tw-passagedata><tw-passagedata pid="9" name="butcher2" tags="" position="1100.1666717529297,695.388916015625" size="100,100">(set: $butcher to 1)
 (set: $money to 120-$money)
-
-
 (set: $clockTime to $clockTime +1)
-
-(if: $extra is 1)[Lotta corrects you, &quot;Varför har du INTE mat&quot;, emphasizing the word order.]
-
+(if: $extra is 1)[Lotta corrects you, &quot;Varför har du INTE mat&quot;, emphasizing the proper word order.]
 Annika (if: $extra is 1)[then ]answers in English, &quot;I had an organic pet food business. Now I don&#39;t. He killed it.&quot; The smile leaves her face as she violently slams her butcher&#39;s knife into the pork loin.
 
 (if: $money&lt;121)[After a minute she wraps up the meat and hands the meat over the counter to Lotta, who gives her the $money kronar. Annika is all smiles again as she takes the payment.](if: $money &gt;121)[After a minute she wraps up the meat and hands the meat over the counter to Lotta, who gives her the $money kronar. She needs to scrounge in her purse for the extra money, and looks annoyed at going over the budget. Annika is all smiles again as she takes the payment.]
@@ -149,13 +143,13 @@ You didn&#39;t sleep great after waking up. You can&#39;t help but feel that som
 
 [[Ja, titta genom fönstret|godmorgon2]]
 
-[[Nej, gå till frukosten|frukost1]]</tw-passagedata><tw-passagedata pid="16" name="frukost1" tags="" position="1381.9444580078125,79" size="100,100">You walk into the kitchen but the table is bare -there&#39;s no breakfast spread like before. 
-
-&quot;Sven sover.&quot; She says. You guess he must be tired after all of the snow drama the previous day. 
+[[Nej, gå till frukosten|frukost]]</tw-passagedata><tw-passagedata pid="16" name="frukost1" tags="" position="1381.9444580078125,79" size="100,100">&quot;Sven sover.&quot; She responds. You guess he must be tired after all of the snow drama the previous day. 
 
 She hands you a cinnamon bun, &quot;Ha en kannelbulle for frukosten!&quot; 
 
 You take the bite into the warm bun. WOW! &quot;Jag älskar det!&quot; You exclaim, pronouncing your love to Lotta.
+
+You realize that Lotta is wearing her coat already. You want to ask if you are going to town but can&#39;t remember which verb to use.
 
 (link: &quot;Ska vi gå till stan nu?&quot;)[(set: $Q1 to 1)(goto: &quot;frukost2&quot;)]
 
@@ -181,7 +175,7 @@ You can also visit (link: &quot;my professional website&quot;)[(open-url: &quot;
 
 [[start over|God Natt 1]]</tw-passagedata><tw-passagedata pid="19" name="godmorgon2" tags="" position="1220.5,24" size="100,100">&quot;Snabbt! Vi har inte mycket tid!&quot; Lotta knocks again impatiently just as you reach the window.
 
-[[Maybe later|frukost1]]</tw-passagedata><tw-passagedata pid="20" name="man1" tags="" position="1747.5,941.8333435058594" size="100,100">(set: $manTalk to 1)
+[[Maybe later|frukost]]</tw-passagedata><tw-passagedata pid="20" name="man1" tags="" position="1747.5,941.8333435058594" size="100,100">(set: $manTalk to 1)
 &quot;Hej&quot; you say.
 
 &quot;Jag älskar snö! Vinter är min favorit årstid!&quot; The man says, going back to his work, smiling.
@@ -189,9 +183,9 @@ You can also visit (link: &quot;my professional website&quot;)[(open-url: &quot;
 [[Go back to Lotta|stadshuset]]</tw-passagedata><tw-passagedata pid="21" name="polisen1a" tags="" position="1641.5,1158.5" size="100,100">You see a black and white photo of some police officers. They are all wearing party hats and sitting around a table. It might be at the restaurant across the square. A young woman sits in the middle, wearing a sly smile but dark, serious eyes. Lotta in an earlier life.
 
 (link: &quot;Sit down again&quot;)[(goto:$previousPassage)]</tw-passagedata><tw-passagedata pid="22" name="frukost2" tags="" position="1513.6111450195312,16" size="100,100">(set: $kanelbulle to 0)
-(if: $Q1 is 0)[&quot;Ja, vi ska åke med bilen.&quot; She leaves the kitchen to put on her jacket.]
+(if: $Q1 is 0)[&quot;Ja, vi ska åke med bilen.&quot; She leaves the kitchen to put on her jacket. Must&#39;ve been the right choice!]
 
-(if: $Q1 is 1)[&quot;Nej, vi ska inte gå.&quot; Lotta makes a &#39;walking&#39; motion with her fingers. &quot;Vi ska åke med bilen.&quot; She mimics driving a car. She leaves the kitchen to put on her jacket.]
+(if: $Q1 is 1)[&quot;Nej, vi ska inte gå.&quot; Lotta makes a &#39;walking&#39; motion with her fingers, correcting your mistake. &quot;Vi ska åke med bilen.&quot; She mimics driving a car. She leaves the kitchen to put on her boots.]
 
 [[Follow Lotta|road]]
 
@@ -236,7 +230,10 @@ So much for that. You and Lotta get into the car and [[go home|end]].</tw-passag
 
 (link: &quot;Två hektar.&quot;)[(set: $newPrice to $itemCarried&#39;s price + $itemCarried&#39;s price)(set: $money to $money - $newPrice)(goto: &quot;butcher&quot;)]
 
-(link: &quot;Tre hektar.&quot;)[(set: $newPrice to $itemCarried&#39;s price + $itemCarried&#39;s price + $itemCarried&#39;s price)(set: $money to $money - $newPrice)(goto: &quot;butcher&quot;)]</tw-passagedata></tw-storydata>
+(link: &quot;Tre hektar.&quot;)[(set: $newPrice to $itemCarried&#39;s price + $itemCarried&#39;s price + $itemCarried&#39;s price)(set: $money to $money - $newPrice)(goto: &quot;butcher&quot;)]</tw-passagedata><tw-passagedata pid="29" name="frukost" tags="" position="1271.9444580078125,154" size="100,100">You walk into the kitchen but the table is bare -there&#39;s no breakfast spread like before. You also notive Sven is missing.
+
+[[&quot;Var är Sven?&quot;|frukost1]] you inquire.
+</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
