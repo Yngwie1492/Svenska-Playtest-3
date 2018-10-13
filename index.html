@@ -36,11 +36,11 @@ In front you of you is a church; to the right is a restaurant; to the left is a 
 
 (if: $polisen is 0)[(link: &quot;Gå i stadshuset/polisen&quot;)[(goto: &quot;stadshuset&quot;)]]
 
-(if: $butcher is 1 and $polisen is 1)[(link: &quot;Your work is done. Gå till hem.&quot;)[(goto: &quot;end&quot;)]]
+(if: $butcher is 1 and $polisen is 1)[(link: &quot;Your work is done. Gå hem.&quot;)[(goto: &quot;end&quot;)]]
 </tw-passagedata><tw-passagedata pid="4" name="restaurangen" tags="" position="1695.5,789.5" size="100,100">You look at the restaurant. The lights are off but you can see about a dozen tables and a large bar in it. 
 
 [[Look at the menu in the window|menyn]]
-(link: &quot;Go back&quot;)[(goto:$previousPassage)]</tw-passagedata><tw-passagedata pid="5" name="butcher" tags="" position="1409.5,676.5" size="100,100">(set: $extra to 0)(set: $itemCarried to &quot;&quot;)(set: $pork to (datamap:&quot;name&quot;, &quot;grisskött&quot;, &quot;description&quot;,&quot;Fresh pork.&quot;, &quot;pickupText&quot;, &quot;You take the package of pork.&quot;, &quot;price&quot;, 30, &quot;isCarried&quot;, false))(set: $beef to (datamap:&quot;name&quot;, &quot;nötkött&quot;, &quot;description&quot;,&quot;Some tasty beef.&quot;, &quot;pickupText&quot;, &quot;You take the beef from Annika.&quot;, &quot;price&quot;, 40, &quot;isCarried&quot;, false))(set: $chicken to (datamap:&quot;name&quot;, &quot;kyckling&quot;, &quot;description&quot;,&quot;Some scrumcious chicken.&quot;, &quot;price&quot;, 20, &quot;isCarried&quot;, false))You enter the butcher&#39;s shop, passing under the big KÖTTDISKEN sign. It is a tidy little space with a bright white tile floor and hard wood panels on the walls. 
+(link: &quot;Go back&quot;)[(goto:$previousPassage)]</tw-passagedata><tw-passagedata pid="5" name="butcher" tags="" position="1409.5,676.5" size="100,100">(set: $extra to 0)(set: $itemCarried to &quot;&quot;)(set: $pork to (datamap:&quot;name&quot;, &quot;griskött&quot;, &quot;description&quot;,&quot;Fresh pork.&quot;, &quot;pickupText&quot;, &quot;You take the package of pork.&quot;, &quot;price&quot;, 30, &quot;isCarried&quot;, false))(set: $beef to (datamap:&quot;name&quot;, &quot;nötkött&quot;, &quot;description&quot;,&quot;Some tasty beef.&quot;, &quot;pickupText&quot;, &quot;You take the beef from Annika.&quot;, &quot;price&quot;, 40, &quot;isCarried&quot;, false))(set: $chicken to (datamap:&quot;name&quot;, &quot;kyckling&quot;, &quot;description&quot;,&quot;Some scrumptious chicken.&quot;, &quot;price&quot;, 20, &quot;isCarried&quot;, false))You enter the butcher&#39;s shop, passing under the big KÖTTDISKEN sign. It is a tidy little space with a bright white tile floor and hard wood panels on the walls. 
 
 On the right sits a big picture of a woman (whom you assume to be the proprietor) holding a pig&#39;s head. It appears to have been taken by a local magazine as part of their annual &#39;best of&#39; issue. 
 
@@ -48,7 +48,7 @@ That same woman walks up to the counter and gives Lotta a friendly &quot;Tjena L
 
 You look at the price list:
 
-Grisskött - 30 Kr./100g
+Griskött - 30 Kr./100g
 
 Nötkött - 40 Kr./100g
 
@@ -56,7 +56,7 @@ Kyckling - 20 Kr./100g
 
 (if: $money is &gt;39)[You have $money kronar left. How much pork, beef and/or chicken do you want to buy?
 
-(link: &quot;Jag ska ha grisskött&quot;)[(set: $itemCarried to $pork)(goto: &quot;purchase&quot;)]
+(link: &quot;Jag ska ha griskött&quot;)[(set: $itemCarried to $pork)(goto: &quot;purchase&quot;)]
 
 (link: &quot;Jag ska ha nötkött&quot;)[(set: $itemCarried to $beef)(goto: &quot;purchase&quot;)]
 
@@ -112,7 +112,7 @@ Lotta looks worried and indicates that it&#39;s time to (link:&quot;leave the sh
 
 This stumps him. So much for a genius detective.
 
-After a few seconds he continues the interrogation, &quot;Are you hurt? Do you need a doctor?&quot; Turning to Lotta he adds, &quot;Har hon ont i huvudet? Kanske du ska gå till sjukhuset.&quot;
+After a few seconds he continues the interrogation, &quot;Are you hurt? Do you need a doctor?&quot; Turning to Lotta he adds, &quot;Har hon ont i huvudet? Kanske ska du gå till sjukhuset.&quot;
 
 [[&quot;No, I think I am fine.&quot;|polisen3]]
 </tw-passagedata><tw-passagedata pid="13" name="polisen3" tags="" position="1224.0555725097656,1107.9444580078125" size="100,100">&quot;Ok, I will trust you, but maybe come back here in a day or two. In the meantime, we will call the US Embassy and try to get back to you. May we send a photo? I&#39;m sorry we cannot do more, but we are very busy looking for Benny.&quot;
