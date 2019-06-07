@@ -11,7 +11,7 @@
 
 <tw-story></tw-story>
 
-<tw-storydata name="Svenska III" startnode="1" creator="Twine" creator-version="2.2.1" ifid="F37B7C81-68EE-4F4F-8914-22CF8655B53B" zoom="1" format="Harlowe" format-version="2.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="God Natt 1" tags="" position="700.5,80" size="100,100">You wake up in the middle of the night again. You look at the clock, now fixed, and see that it is 3:30. Did you hear something outside again?
+<tw-storydata name="Svenska III" startnode="1" creator="Twine" creator-version="2.3.1" ifid="F37B7C81-68EE-4F4F-8914-22CF8655B53B" zoom="1" format="Harlowe" format-version="2.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="God Natt 1" tags="" position="700.5,80" size="100,100">You wake up in the middle of the night again. You look at the clock, now fixed, and see that it is 3:30. Did you hear something outside again?
 
 [[Go the the window| window]]
 
@@ -32,31 +32,31 @@ In front you of you is a church; to the right is a restaurant; to the left is a 
 
 (if: $butcher is 0 and $polisen is 0)[(link: &quot;Gå till restaurangen&quot;)[(goto: &quot;restaurangen&quot;)]](if: $butcher is 1 and $polisen is 0)[(link: &quot;Gå till restaurangen&quot;)[(goto: &quot;restaurangen&quot;)]](if: $butcher is 0 and $polisen is 1)[(link: &quot;Gå till restaurangen&quot;)[(goto: &quot;restaurangen&quot;)]](if: $butcher is 1 and $polisen is 1)[(link: &quot;Gå till restaurangen&quot;)[(goto: &quot;restaurangen2&quot;)]]
 
-(if: $butcher is 0)[(link: &quot;Gå i köttdisken&quot;)[(goto: &quot;butcher&quot;)]]
+(if: $butcher is 0)[(link: &quot;Gå i charkuteri&quot;)[(goto: &quot;butcher&quot;)]]
 
-(if: $polisen is 0)[(link: &quot;Gå i stadshuset/polisen&quot;)[(goto: &quot;stadshuset&quot;)]]
+(if: $polisen is 0)[(link: &quot;Gå i stadshuset/polishuset&quot;)[(goto: &quot;stadshuset&quot;)]]
 
 (if: $butcher is 1 and $polisen is 1)[(link: &quot;Your work is done. Gå hem.&quot;)[(goto: &quot;end&quot;)]]
 </tw-passagedata><tw-passagedata pid="4" name="restaurangen" tags="" position="1695.5,789.5" size="100,100">You look at the restaurant. The lights are off but you can see about a dozen tables and a large bar in it. 
 
 [[Look at the menu in the window|menyn]]
-(link: &quot;Go back&quot;)[(goto:$previousPassage)]</tw-passagedata><tw-passagedata pid="5" name="butcher" tags="" position="1409.5,676.5" size="100,100">(set: $extra to 0)(set: $itemCarried to &quot;&quot;)(set: $pork to (datamap:&quot;name&quot;, &quot;griskött&quot;, &quot;description&quot;,&quot;Fresh pork.&quot;, &quot;pickupText&quot;, &quot;You take the package of pork.&quot;, &quot;price&quot;, 30, &quot;isCarried&quot;, false))(set: $beef to (datamap:&quot;name&quot;, &quot;nötkött&quot;, &quot;description&quot;,&quot;Some tasty beef.&quot;, &quot;pickupText&quot;, &quot;You take the beef from Annika.&quot;, &quot;price&quot;, 40, &quot;isCarried&quot;, false))(set: $chicken to (datamap:&quot;name&quot;, &quot;kyckling&quot;, &quot;description&quot;,&quot;Some scrumptious chicken.&quot;, &quot;price&quot;, 20, &quot;isCarried&quot;, false))You enter the butcher&#39;s shop, passing under the big KÖTTDISKEN sign. It is a tidy little space with a bright white tile floor and hard wood panels on the walls. 
+(link: &quot;Go back&quot;)[(goto:$previousPassage)]</tw-passagedata><tw-passagedata pid="5" name="butcher" tags="" position="1409.5,676.5" size="100,100">(set: $extra to 0)(set: $itemCarried to &quot;&quot;)(set: $pork to (datamap:&quot;name&quot;, &quot;fläsk&quot;, &quot;description&quot;,&quot;Fresh pork.&quot;, &quot;pickupText&quot;, &quot;You take the package of pork.&quot;, &quot;price&quot;, 30, &quot;isCarried&quot;, false))(set: $beef to (datamap:&quot;name&quot;, &quot;nötkött&quot;, &quot;description&quot;,&quot;Some tasty beef.&quot;, &quot;pickupText&quot;, &quot;You take the beef from Annika.&quot;, &quot;price&quot;, 40, &quot;isCarried&quot;, false))(set: $chicken to (datamap:&quot;name&quot;, &quot;kyckling&quot;, &quot;description&quot;,&quot;Some scrumptious chicken.&quot;, &quot;price&quot;, 20, &quot;isCarried&quot;, false))(if: $money is 120)[You enter the butcher&#39;s shop, passing under the big &#39;charkuteri&#39; sign. It is a tidy little space with a bright white tile floor and hard wood panels on the walls. 
 
-On the right sits a big picture of a woman (whom you assume to be the proprietor) holding a pig&#39;s head. It appears to have been taken by a local magazine as part of their annual &#39;best of&#39; issue. 
+On the right sits a picture of a woman (whom you assume to be the proprietor) holding a pig&#39;s head. It appears to have been taken by a local magazine as part of their annual &#39;best of&#39; issue. 
 
-That same woman walks up to the counter and gives Lotta a friendly &quot;Tjena Lotta.&quot; She turns to you and adds, &quot;Hej, jag är Annika. Vad ska du ha?&quot;
-
+That same woman walks up to the counter and gives Lotta a friendly &quot;Tjena Lotta.&quot; She turns to you and adds, &quot;Hej, jag är Annika. Vad vill du ha?&quot;
+]
 You look at the price list:
 
-Griskött - 30 Kr./100g
+Fläsk - 30 kr./kg
 
-Nötkött - 40 Kr./100g
+Nötkött - 40 kr./kg
 
-Kyckling - 20 Kr./100g
+Kyckling - 20 kr./kg
 
-(if: $money is &gt;39)[You have $money kronar left. How much pork, beef and/or chicken do you want to buy?
+(if: $money is &gt;39)[You have $money kronor left. How much pork, beef and/or chicken do you want to buy?
 
-(link: &quot;Jag ska ha griskött&quot;)[(set: $itemCarried to $pork)(goto: &quot;purchase&quot;)]
+(link: &quot;Jag ska ha fläsk&quot;)[(set: $itemCarried to $pork)(goto: &quot;purchase&quot;)]
 
 (link: &quot;Jag ska ha nötkött&quot;)[(set: $itemCarried to $beef)(goto: &quot;purchase&quot;)]
 
@@ -71,40 +71,45 @@ Kyckling - 20 Kr./100g
 (link: &quot;Go back to the square&quot;)[(goto:&quot;torget&quot;)]</tw-passagedata><tw-passagedata pid="7" name="polisen1" tags="" position="1543.5,1052.5" size="100,100">(set: $previousPassage to &quot;polisen1&quot;)
 Lotta enters ahead of you, straight past the receptionist and into the police station. On her way she nods a hello but doesn&#39;t say anything.
 
-Once you are inside the office she tells you to &quot;vänta här&quot; and goes in to speak privately with the chief. 
+Once you are inside the office she tells you to &quot;vänta här&quot; and goes in to speak privately with the chief. Next to you is a table with coffee and stale pastries - round ones with some sort of almond filling. You are tempted to take a bite but think better of it.
 
 (if: $walls is 0)[[[Look at the walls|polisen1a]]
 
-][[Stay seated and wait|polisen2]]</tw-passagedata><tw-passagedata pid="8" name="butcher1" tags="" position="1263.5,678.8333435058594" size="100,100">You look at a display case next to the refrigerater. A friendly kitten and puppy smile back at you. Written in large letters is, &quot;ANNIKAS ORGANISK MAT FOR DINA HUNDAR OCH KATTER&quot;, but the case itself is empty. 
+][[Stay seated and wait|polisen2]]</tw-passagedata><tw-passagedata pid="8" name="butcher1" tags="" position="1263.5,678.8333435058594" size="100,100">You look at a display case next to the refrigerater. A friendly kitten and puppy smile back at you. Written in large letters is, &quot;ANNIKAS EKOLOGISK MAT FOR DINA HUNDAR OCH KATTER&quot;. 
 
-What happened to the pet food?
+The case is full and it looks like there are deep discounts: you see a second sign, this one red, with &quot;UTFÖRSÄLJNING -75%&quot; on it.
 
 (link: &quot;Vad har du för djurmat?&quot;)[(goto: &quot;butcher2&quot;)]
 
-(link: &quot;Varför har du mat inte för djur?&quot;)[(set: $extra to 1)(goto: &quot;butcher2&quot;)]</tw-passagedata><tw-passagedata pid="9" name="butcher2" tags="" position="1100.1666717529297,695.388916015625" size="100,100">(set: $butcher to 1)(set: $money to 120-$money)(if: $extra is 1)[Lotta corrects you, &quot;Varför har du INTE mat&quot;, emphasizing the proper word order.]
-Annika (if: $extra is 1)[then ]answers in English, &quot;I plan to start an organic pet food business.&quot; The smile leaves her face as she violently slams her butcher&#39;s knife into the cut of meat.
+(link: &quot;Varför har du ett utförsäljning för djur?&quot;)[(set: $extra to 1)(goto: &quot;butcher2&quot;)]</tw-passagedata><tw-passagedata pid="9" name="butcher2" tags="" position="1100.1666717529297,695.388916015625" size="100,100">(set: $butcher to 1)(set: $money to 120-$money)(if: $extra is 1)[Lotta corrects you, &quot;Varför har du en utförsäljning&quot;, emphasizing the proper word.]
+Annika (if: $extra is 1)[then ]answers in English, &quot;I started an ekologisk pet food business.&quot; The smile leaves her face as she violently slams her butcher&#39;s knife into the cut of meat.
 
-(if: $money&lt;121)[After a minute she wraps up the meat and hands it over the counter to Lotta, who gives her the $money kronar. Annika is all smiles again as she takes the payment, but the suddenness of the change in her emotions makes you uneasy.](if: $money &gt;121)[After a minute she wraps up the meat and hands the meat over the counter to Lotta, who gives her the $money kronar. She needs to scrounge in her purse for the extra money and looks annoyed at going over the budget. Annika is all smiles again as she takes the payment, but the suddenness of the change in her emotions makes you uneasy.]
+(if: $money&lt;121)[After a minute she wraps up the meat and hands it over the counter to Lotta, who gives her the $money kronor. Annika looks at the cash and asks, &quot;Har du inte kort?&quot;
 
-(link: &quot;Commend her on her cleanliness&quot;)[(goto:&quot;butcher3&quot;)]
+&quot;Jag glömde det.&quot; Lotta seems to be apologizing. The butcher rolls her eyes and blows the dust off of the cash register before ringing her up. 
+](if: $money &gt;121)[After a minute she wraps up the meat and hands the meat over the counter to Lotta, who gives her the $money kronor. She needs to scrounge in her purse for the extra money and looks annoyed at going over the budget. Annika looks at the cash and asks, &quot;Har du inte kort?&quot;
 
-(link:&quot;Leave the shop&quot;)[(goto:&quot;butcher4&quot;)]</tw-passagedata><tw-passagedata pid="10" name="menyn" tags="" position="1844.5,745.5" size="100,100">Öl  100 Kr. 
+&quot;Jag glömde det.&quot; Lotta seems to be apologizing. The butcher rolls her eyes and blows the dust off of the cash register before ringing her up. ]
 
-Kaffe 25 Kr.
+(link: &quot;Compliment her on her shop&quot;)[(goto:&quot;butcher3&quot;)]
 
-Akvavit  100 Kr. 
+(link:&quot;Leave the shop&quot;)[(goto:&quot;butcher4&quot;)]</tw-passagedata><tw-passagedata pid="10" name="menyn" tags="" position="1844.5,745.5" size="100,100">Öl  100 kr. 
 
-Kött  120 Kr.
+Kaffe  25 kr.
 
-Bröd  10 Kr.
+snaps  100 kr. 
 
-(link: &quot;Go back to the square&quot;)[(goto:&quot;torget&quot;)]</tw-passagedata><tw-passagedata pid="11" name="butcher3" tags="" position="965.7222290039062,690.9444580078125" size="100,100">&quot;Tack så mycket! I cleaned the shop Sunday after closing for the storm - every nook and cranny! It took me all night. I even had to light candles during the power outage.&quot;
+Kött  100 kr.
+
+Bröd  10 kr.
+
+(link: &quot;Go back to the square&quot;)[(goto:&quot;torget&quot;)]</tw-passagedata><tw-passagedata pid="11" name="butcher3" tags="" position="965.7222290039062,690.9444580078125" size="100,100">&quot;Tack så mycket! I cleaned the shop Sunday after closing for the storm - every nook and cranny! But I think I missed the register, I hardly ever use it. It took me all night. I even had to light candles during the power outage.&quot;
 
 Lotta looks worried and indicates that it&#39;s time to (link:&quot;leave the shop.&quot;)[(goto:&quot;butcher4&quot;)]</tw-passagedata><tw-passagedata pid="12" name="polisen2" tags="" position="1368.0555725097656,1051.9444580078125" size="100,100">After a few minutes Lotta comes out and invites you into the office, where  the police officer begins questioning you. He is younger than you expected and has a small pot belly. He looks generally annoyed at your presence. Before sitting down you glance around [[at your surroundings|polisen2a]].
 
 &quot;Vem är du? Kan du förstå mig?&quot; he asks. His &#39;ä&#39; is especially nasal.
  
-&quot;Jag kan inte förstå Svenska,&quot; you reply.
+&quot;Jag kan inte förstå svenska,&quot; you reply.
 
 &quot;Who are you?&quot; He asks, switching into English.
 
@@ -112,7 +117,7 @@ Lotta looks worried and indicates that it&#39;s time to (link:&quot;leave the sh
 
 This stumps him. So much for a genius detective.
 
-After a few seconds he continues the interrogation, &quot;Are you hurt? Do you need a doctor?&quot; Turning to Lotta he adds, &quot;Har hon ont i huvudet? Kanske ska du gå till sjukhuset.&quot;
+After a few seconds he continues the interrogation, &quot;Are you hurt? Do you need a doctor?&quot; Turning to Lotta he adds, &quot;Har hon ont i huvudet? Kanske behöver du gå till sjukhuset.&quot;
 
 [[&quot;No, I think I am fine.&quot;|polisen3]]
 </tw-passagedata><tw-passagedata pid="13" name="polisen3" tags="" position="1224.0555725097656,1107.9444580078125" size="100,100">&quot;Ok, I will trust you, but maybe come back here in a day or two. In the meantime, we will call the US Embassy and try to get back to you. May we send a photo? I&#39;m sorry we cannot do more, but we are very busy looking for Benny.&quot;
@@ -164,7 +169,7 @@ You can also visit (link: &quot;my professional website&quot;)[(open-url: &quot;
 (link: &quot;Sit down again&quot;)[(goto:$previousPassage)]</tw-passagedata><tw-passagedata pid="22" name="frukost2" tags="" position="1512.6111450195312,16" size="100,100">(set: $kanelbulle to 0)
 (if: $Q2 is 0)[&quot;Ja, vi ska åka med bilen.&quot; She leaves the kitchen to put on her jacket. Must&#39;ve been the right choice!]
 
-(if: $Q2 is 1)[&quot;Nej, vi ska inte gå.&quot; Lotta makes a &#39;walking&#39; motion with her fingers, correcting your mistake. &quot;Vi ska åke med bilen.&quot; She mimics driving a car. She leaves the kitchen to put on her boots.]
+(if: $Q2 is 1)[&quot;Nej, vi ska inte gå.&quot; Lotta makes a &#39;walking&#39; motion with her fingers, correcting your mistake. &quot;Vi ska åka med bilen.&quot; She mimics driving a car. She grabs a shopping list from the kitchen table, then leaves to put on her boots.]
 
 [[Follow Lotta|road]]
 
@@ -198,11 +203,11 @@ So much for that. You and Lotta get into the car and [[go home|end]].</tw-passag
 
 &quot;Hur mycket?&quot; She responds. 
 
-(link: &quot;En hekto.&quot;)[(set: $money to $money - $itemCarried&#39;s price)(goto: &quot;butcher&quot;)]
+(link: &quot;En kg.&quot;)[(set: $money to $money - $itemCarried&#39;s price)(goto: &quot;butcher&quot;)]
 
-(link: &quot;Två hektar.&quot;)[(set: $newPrice to $itemCarried&#39;s price + $itemCarried&#39;s price)(set: $money to $money - $newPrice)(goto: &quot;butcher&quot;)]
+(link: &quot;Två kg.&quot;)[(set: $newPrice to $itemCarried&#39;s price + $itemCarried&#39;s price)(set: $money to $money - $newPrice)(goto: &quot;butcher&quot;)]
 
-(link: &quot;Tre hektar.&quot;)[(set: $newPrice to $itemCarried&#39;s price + $itemCarried&#39;s price + $itemCarried&#39;s price)(set: $money to $money - $newPrice)(goto: &quot;butcher&quot;)]</tw-passagedata><tw-passagedata pid="29" name="frukost" tags="" position="1271.9444580078125,154" size="100,100">You walk into the kitchen but the table is bare - there&#39;s no breakfast spread like the day before. You also notice that Sven is missing.
+(link: &quot;Tre kg.&quot;)[(set: $newPrice to $itemCarried&#39;s price + $itemCarried&#39;s price + $itemCarried&#39;s price)(set: $money to $money - $newPrice)(goto: &quot;butcher&quot;)]</tw-passagedata><tw-passagedata pid="29" name="frukost" tags="" position="1271.9444580078125,154" size="100,100">You walk into the kitchen but the table is bare - there&#39;s no breakfast spread like the day before. You also notice that Sven is missing.
 
 (link: &quot;Var är Sven?&quot;)[(set: $Q1 to 1)(goto: &quot;frukost1&quot;)]
 
